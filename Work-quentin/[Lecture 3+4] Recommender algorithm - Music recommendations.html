@@ -183,7 +183,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="o">%%</span><span class="nx">javascript</span>
@@ -202,10 +202,10 @@ div#notebook {
 
 
 
-<div id="e7025b79-d4d9-4217-bfa4-444080f709de"></div>
+<div id="138745ec-aef3-4171-9969-754e650b5a40"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#e7025b79-d4d9-4217-bfa4-444080f709de');
+var element = $('#138745ec-aef3-4171-9969-754e650b5a40');
 var kernel = IPython.notebook.kernel;var thename = window.document.getElementById("notebook_name").innerHTML;var command = "THE_NOTEBOOK = " + "'"+thename+"'";kernel.execute(command);command="os.environ['THE_NOTEBOOK'] = THE_NOTEBOOK";kernel.execute(command);var cell = IPython.notebook.get_cell(2);cell.execute();IPython.notebook.get_cell(3).focus_cell();var x = $('.code_cell');$(x[1]).children('.input').hide();
 </script>
 </div>
@@ -218,7 +218,7 @@ var kernel = IPython.notebook.kernel;var thename = window.document.getElementByI
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">outputdir</span> <span class="o">=</span> <span class="s2">&quot;/tmp/tools/&quot;</span>
@@ -234,6 +234,41 @@ var kernel = IPython.notebook.kernel;var thename = window.document.getElementByI
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Traceback (most recent call last):
+  File &quot;/tmp/tools/construct_menu.py&quot;, line 145, in &lt;module&gt;
+    ofile = generateHtmlRoadmap(lecture_file_name, directory)
+  File &quot;/tmp/tools/construct_menu.py&quot;, line 103, in generateHtmlRoadmap
+    newNode = Node(line, None, currentNode.parent)
+AttributeError: &apos;NoneType&apos; object has no attribute &apos;parent&apos;
+</pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansired">---------------------------------------------------------------------------</span>
+<span class="ansired">FileNotFoundError</span>                         Traceback (most recent call last)
+<span class="ansigreen">&lt;ipython-input-2-ce635405ffb6&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
+<span class="ansigreen">      6</span> <span class="ansigreen">from</span> IPython<span class="ansiyellow">.</span>core<span class="ansiyellow">.</span>display <span class="ansigreen">import</span> HTML<span class="ansiyellow"></span>
+<span class="ansigreen">      7</span> output_file_name <span class="ansiyellow">=</span> outputdir <span class="ansiyellow">+</span> THE_NOTEBOOK<span class="ansiyellow">.</span>replace<span class="ansiyellow">(</span><span class="ansiblue">&quot; &quot;</span><span class="ansiyellow">,</span> <span class="ansiblue">&quot;&quot;</span><span class="ansiyellow">)</span><span class="ansiyellow">.</span>replace<span class="ansiyellow">(</span><span class="ansiblue">&quot;[&quot;</span><span class="ansiyellow">,</span> <span class="ansiblue">&quot;&quot;</span><span class="ansiyellow">)</span><span class="ansiyellow">.</span>replace<span class="ansiyellow">(</span><span class="ansiblue">&quot;]&quot;</span><span class="ansiyellow">,</span> <span class="ansiblue">&quot;&quot;</span><span class="ansiyellow">)</span> <span class="ansiyellow">+</span> <span class="ansiblue">&quot;.ipynb.html&quot;</span><span class="ansiyellow"></span>
+<span class="ansigreen">----&gt; 8</span><span class="ansiyellow"> </span><span class="ansigreen">with</span> open<span class="ansiyellow">(</span>output_file_name<span class="ansiyellow">)</span> <span class="ansigreen">as</span> fp<span class="ansiyellow">:</span><span class="ansiyellow"></span>
+<span class="ansigreen">      9</span>     html <span class="ansiyellow">=</span> fp<span class="ansiyellow">.</span>read<span class="ansiyellow">(</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
+<span class="ansigreen">     10</span> HTML<span class="ansiyellow">(</span>html<span class="ansiyellow">)</span><span class="ansiyellow"></span>
+
+<span class="ansired">FileNotFoundError</span>: [Errno 2] No such file or directory: &apos;/tmp/tools/Lecture3+4Recommenderalgorithm-Musicrecommendations.ipynb.html&apos;</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -329,7 +364,7 @@ var kernel = IPython.notebook.kernel;var thename = window.document.getElementByI
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">os</span>
@@ -5410,7 +5445,7 @@ However, if the data has the invalid entries such that SPARK SQL API is stuck, t
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">rawArtistAlias</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">textFile</span><span class="p">(</span><span class="n">base</span> <span class="o">+</span> <span class="s2">&quot;artist_alias.txt&quot;</span><span class="p">)</span>
@@ -5483,7 +5518,7 @@ However, if the data has the invalid entries such that SPARK SQL API is stuck, t
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">bArtistAlias</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">broadcast</span><span class="p">(</span><span class="n">artistAlias</span><span class="p">)</span>
@@ -5506,7 +5541,7 @@ However, if the data has the invalid entries such that SPARK SQL API is stuck, t
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[40]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[4]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -5547,7 +5582,7 @@ However, if the data has the invalid entries such that SPARK SQL API is stuck, t
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="kn">from</span> <span class="nn">pyspark.mllib.recommendation</span> <span class="k">import</span> <span class="n">ALS</span><span class="p">,</span> <span class="n">MatrixFactorizationModel</span><span class="p">,</span> <span class="n">Rating</span>
@@ -5571,7 +5606,7 @@ However, if the data has the invalid entries such that SPARK SQL API is stuck, t
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">allData</span> <span class="o">=</span> <span class="n">userArtistDataRDD</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">Rating</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">r</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span><span class="o">.</span><span class="n">repartition</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">cache</span><span class="p">()</span>
@@ -5947,7 +5982,7 @@ Let's use this function to store our model as name <code>lastfm_model.spark</cod
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c1"># construct data of artists (artist_id, artist_name)</span>
@@ -5995,7 +6030,7 @@ Let's use this function to store our model as name <code>lastfm_model.spark</cod
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c1"># Filter in those artists, get just artist, and print</span>
@@ -6021,7 +6056,7 @@ Let's use this function to store our model as name <code>lastfm_model.spark</cod
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[&apos;50 Cent&apos;, &apos;Snoop Dogg&apos;, &apos;Kanye West&apos;, &apos;2Pac&apos;, &apos;The Game&apos;]
+<pre>[&apos;[unknown]&apos;, &apos;Eminem&apos;, &apos;The Killers&apos;, &apos;U2&apos;, &apos;Green Day&apos;]
 </pre>
 </div>
 </div>
@@ -6042,14 +6077,25 @@ Let's use this function to store our model as name <code>lastfm_model.spark</cod
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="k">def</span> <span class="nf">unpersist</span><span class="p">(</span><span class="n">model</span><span class="p">):</span>
     <span class="n">model</span><span class="o">.</span><span class="n">userFeatures</span><span class="p">()</span><span class="o">.</span><span class="n">unpersist</span><span class="p">()</span>
     <span class="n">model</span><span class="o">.</span><span class="n">productFeatures</span><span class="p">()</span><span class="o">.</span><span class="n">unpersist</span><span class="p">()</span>
+</pre></div>
 
-<span class="c1"># uncache data and model when they are no longer used  </span>
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="c1"># uncache data and model when they are no longer used  </span>
 <span class="n">unpersist</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
 </pre></div>
 
@@ -6106,7 +6152,7 @@ One of serveral methods approach to evaluate  a recommender based on its ability
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">trainData</span><span class="p">,</span> <span class="n">cvData</span> <span class="o">=</span> <span class="n">allData</span><span class="o">.</span><span class="n">randomSplit</span><span class="p">([</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">])</span>
@@ -6122,11 +6168,11 @@ One of serveral methods approach to evaluate  a recommender based on its ability
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[56]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[8]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>PythonRDD[564] at RDD at PythonRDD.scala:43</pre>
+<pre>PythonRDD[12] at RDD at PythonRDD.scala:43</pre>
 </div>
 
 </div>
@@ -6190,7 +6236,7 @@ One of serveral methods approach to evaluate  a recommender based on its ability
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c1"># Get all unique artistId, and broadcast them</span>
@@ -6205,7 +6251,7 @@ One of serveral methods approach to evaluate  a recommender based on its ability
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="kn">from</span> <span class="nn">random</span> <span class="k">import</span> <span class="n">randint</span>
@@ -6424,35 +6470,6 @@ finish in 20.967193 seconds
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[66]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">trainData</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">Out[66]:</div>
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>Rating(user=2399859, product=2115, rating=1.0)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -6502,7 +6519,7 @@ finish in 9.795129 seconds
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Answer:">Answer:<a class="anchor-link" href="#Answer:">&#182;</a></h3><p>This simple method has a lower accuracy than the ALS method. (94.9% vs 96.4% so a 1.5% difference, which is quite low) but the benefits are enormous in terms of computational efforts since we don't have to train our model. The ALS takes 59 seconds to answer our request while our simple method of recommending the most popular artists takes only 17 seconds to compute.</p>
+<h3 id="Answer:">Answer:<a class="anchor-link" href="#Answer:">&#182;</a></h3><p>This simple method has a lower accuracy than the ALS method. (94.9% vs 96.4% so a 1.5% difference, which is quite low) but the benefits are enormous in terms of computational efforts since we don't have to train our model. The ALS takes 59 seconds to answer our request while our simple method of recommending the most popular artists takes only 17 seconds to compute. The thing is, the closer we get to 100% the harder it is to gain accuracy. So 1.5 percent is actually very important, it means that it deals with corner cases.</p>
 
 </div>
 </div>
@@ -6577,7 +6594,7 @@ We will try to find "good" values for them. Indeed, the values of hyperparameter
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">evaluations</span> <span class="o">=</span> <span class="p">[]</span>
@@ -6608,11 +6625,6 @@ We will try to find "good" values for them. Indeed, the values of hyperparameter
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Train model with rank=10 lambda_=1.000000 alpha=1.000000
-Train model with rank=10 lambda_=1.000000 alpha=40.000000
-Train model with rank=10 lambda_=0.000100 alpha=1.000000
-Train model with rank=10 lambda_=0.000100 alpha=40.000000
-Train model with rank=50 lambda_=1.000000 alpha=1.000000
-Train model with rank=50 lambda_=1.000000 alpha=40.000000
 </pre>
 </div>
 </div>
@@ -6621,111 +6633,50 @@ Train model with rank=50 lambda_=1.000000 alpha=40.000000
 <div class="output_subarea output_text output_error">
 <pre>
 <span class="ansired">---------------------------------------------------------------------------</span>
-<span class="ansired">Py4JJavaError</span>                             Traceback (most recent call last)
-<span class="ansigreen">&lt;ipython-input-70-5e2ceb9fb2bd&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
-<span class="ansigreen">      9</span>             model <span class="ansiyellow">=</span> ALS<span class="ansiyellow">.</span>trainImplicit<span class="ansiyellow">(</span>trainData<span class="ansiyellow">,</span> rank<span class="ansiyellow">,</span> <span class="ansicyan">5</span><span class="ansiyellow">,</span> lambda_<span class="ansiyellow">,</span> alpha<span class="ansiyellow">=</span>alpha<span class="ansiyellow">)</span><span class="ansiyellow"></span>
-<span class="ansigreen">     10</span> <span class="ansiyellow"></span>
-<span class="ansigreen">---&gt; 11</span><span class="ansiyellow">             </span>auc <span class="ansiyellow">=</span> calculateAUC<span class="ansiyellow">(</span>cvData<span class="ansiyellow">,</span> bAllItemIDs<span class="ansiyellow">,</span> model<span class="ansiyellow">.</span>predictAll<span class="ansiyellow">)</span><span class="ansiyellow"></span>
-<span class="ansigreen">     12</span> <span class="ansiyellow"></span>
+<span class="ansired">NameError</span>                                 Traceback (most recent call last)
+<span class="ansigreen">&lt;ipython-input-12-5e2ceb9fb2bd&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
 <span class="ansigreen">     13</span>             evaluations<span class="ansiyellow">.</span>append<span class="ansiyellow">(</span><span class="ansiyellow">(</span><span class="ansiyellow">(</span>rank<span class="ansiyellow">,</span> lambda_<span class="ansiyellow">,</span> alpha<span class="ansiyellow">)</span><span class="ansiyellow">,</span> auc<span class="ansiyellow">)</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
+<span class="ansigreen">     14</span> <span class="ansiyellow"></span>
+<span class="ansigreen">---&gt; 15</span><span class="ansiyellow">             </span>unpersist<span class="ansiyellow">(</span>model<span class="ansiyellow">)</span><span class="ansiyellow"></span>
 
-<span class="ansigreen">&lt;ipython-input-59-9ae650d81560&gt;</span> in <span class="ansicyan">calculateAUC</span><span class="ansiblue">(positiveData, bAllItemIDs, predictFunction)</span>
-<span class="ansigreen">     89</span>                 <span class="ansiyellow">.</span>values<span class="ansiyellow">(</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
-<span class="ansigreen">     90</span>                 .map(
-<span class="ansigreen">---&gt; 91</span><span class="ansiyellow">                     </span><span class="ansigreen">lambda</span> positive_negativeRatings<span class="ansiyellow">:</span> ratioOfCorrectRanks<span class="ansiyellow">(</span>positive_negativeRatings<span class="ansiyellow">[</span><span class="ansicyan">0</span><span class="ansiyellow">]</span><span class="ansiyellow">,</span> positive_negativeRatings<span class="ansiyellow">[</span><span class="ansicyan">1</span><span class="ansiyellow">]</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
-<span class="ansigreen">     92</span>                 )
-<span class="ansigreen">     93</span>                 <span class="ansiyellow">.</span>mean<span class="ansiyellow">(</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
+<span class="ansired">NameError</span>: name &apos;unpersist&apos; is not defined</pre>
+</div>
+</div>
 
-<span class="ansigreen">/opt/spark/python/pyspark/rdd.py</span> in <span class="ansicyan">mean</span><span class="ansiblue">(self)</span>
-<span class="ansigreen">   1151</span>         <span class="ansicyan">2.0</span><span class="ansiyellow"></span>
-<span class="ansigreen">   1152</span>         &quot;&quot;&quot;
-<span class="ansigreen">-&gt; 1153</span><span class="ansiyellow">         </span><span class="ansigreen">return</span> self<span class="ansiyellow">.</span>stats<span class="ansiyellow">(</span><span class="ansiyellow">)</span><span class="ansiyellow">.</span>mean<span class="ansiyellow">(</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
-<span class="ansigreen">   1154</span> <span class="ansiyellow"></span>
-<span class="ansigreen">   1155</span>     <span class="ansigreen">def</span> variance<span class="ansiyellow">(</span>self<span class="ansiyellow">)</span><span class="ansiyellow">:</span><span class="ansiyellow"></span>
+</div>
+</div>
 
-<span class="ansigreen">/opt/spark/python/pyspark/rdd.py</span> in <span class="ansicyan">stats</span><span class="ansiblue">(self)</span>
-<span class="ansigreen">   1014</span>             <span class="ansigreen">return</span> left_counter<span class="ansiyellow">.</span>mergeStats<span class="ansiyellow">(</span>right_counter<span class="ansiyellow">)</span><span class="ansiyellow"></span>
-<span class="ansigreen">   1015</span> <span class="ansiyellow"></span>
-<span class="ansigreen">-&gt; 1016</span><span class="ansiyellow">         </span><span class="ansigreen">return</span> self<span class="ansiyellow">.</span>mapPartitions<span class="ansiyellow">(</span><span class="ansigreen">lambda</span> i<span class="ansiyellow">:</span> <span class="ansiyellow">[</span>StatCounter<span class="ansiyellow">(</span>i<span class="ansiyellow">)</span><span class="ansiyellow">]</span><span class="ansiyellow">)</span><span class="ansiyellow">.</span>reduce<span class="ansiyellow">(</span>redFunc<span class="ansiyellow">)</span><span class="ansiyellow"></span>
-<span class="ansigreen">   1017</span> <span class="ansiyellow"></span>
-<span class="ansigreen">   1018</span>     <span class="ansigreen">def</span> histogram<span class="ansiyellow">(</span>self<span class="ansiyellow">,</span> buckets<span class="ansiyellow">)</span><span class="ansiyellow">:</span><span class="ansiyellow"></span>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">rank</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">lambda_</span> <span class="o">=</span> <span class="mf">0.0001</span>
+<span class="n">alpha</span> <span class="o">=</span> <span class="mf">40.0</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Train model with rank=</span><span class="si">%d</span><span class="s2"> lambda_=</span><span class="si">%f</span><span class="s2"> alpha=</span><span class="si">%f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">rank</span><span class="p">,</span> <span class="n">lambda_</span><span class="p">,</span> <span class="n">alpha</span><span class="p">))</span>
+<span class="c1"># with each combination of params, we should run multiple times and get avg</span>
+<span class="c1"># for simple, we only run one time.</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">ALS</span><span class="o">.</span><span class="n">trainImplicit</span><span class="p">(</span><span class="n">trainData</span><span class="p">,</span> <span class="n">rank</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">lambda_</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">)</span>
+            
+<span class="n">auc</span> <span class="o">=</span> <span class="n">calculateAUC</span><span class="p">(</span><span class="n">cvData</span><span class="p">,</span> <span class="n">bAllItemIDs</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">predictAll</span><span class="p">)</span>
+            
+<span class="n">evaluations</span><span class="o">.</span><span class="n">append</span><span class="p">(((</span><span class="n">rank</span><span class="p">,</span> <span class="n">lambda_</span><span class="p">,</span> <span class="n">alpha</span><span class="p">),</span> <span class="n">auc</span><span class="p">))</span>
+<span class="n">unpersist</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+</pre></div>
 
-<span class="ansigreen">/opt/spark/python/pyspark/rdd.py</span> in <span class="ansicyan">reduce</span><span class="ansiblue">(self, f)</span>
-<span class="ansigreen">    797</span>             <span class="ansigreen">yield</span> reduce<span class="ansiyellow">(</span>f<span class="ansiyellow">,</span> iterator<span class="ansiyellow">,</span> initial<span class="ansiyellow">)</span><span class="ansiyellow"></span>
-<span class="ansigreen">    798</span> <span class="ansiyellow"></span>
-<span class="ansigreen">--&gt; 799</span><span class="ansiyellow">         </span>vals <span class="ansiyellow">=</span> self<span class="ansiyellow">.</span>mapPartitions<span class="ansiyellow">(</span>func<span class="ansiyellow">)</span><span class="ansiyellow">.</span>collect<span class="ansiyellow">(</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
-<span class="ansigreen">    800</span>         <span class="ansigreen">if</span> vals<span class="ansiyellow">:</span><span class="ansiyellow"></span>
-<span class="ansigreen">    801</span>             <span class="ansigreen">return</span> reduce<span class="ansiyellow">(</span>f<span class="ansiyellow">,</span> vals<span class="ansiyellow">)</span><span class="ansiyellow"></span>
+</div>
+</div>
+</div>
 
-<span class="ansigreen">/opt/spark/python/pyspark/rdd.py</span> in <span class="ansicyan">collect</span><span class="ansiblue">(self)</span>
-<span class="ansigreen">    771</span>         &quot;&quot;&quot;
-<span class="ansigreen">    772</span>         <span class="ansigreen">with</span> SCCallSiteSync<span class="ansiyellow">(</span>self<span class="ansiyellow">.</span>context<span class="ansiyellow">)</span> <span class="ansigreen">as</span> css<span class="ansiyellow">:</span><span class="ansiyellow"></span>
-<span class="ansigreen">--&gt; 773</span><span class="ansiyellow">             </span>port <span class="ansiyellow">=</span> self<span class="ansiyellow">.</span>ctx<span class="ansiyellow">.</span>_jvm<span class="ansiyellow">.</span>PythonRDD<span class="ansiyellow">.</span>collectAndServe<span class="ansiyellow">(</span>self<span class="ansiyellow">.</span>_jrdd<span class="ansiyellow">.</span>rdd<span class="ansiyellow">(</span><span class="ansiyellow">)</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
-<span class="ansigreen">    774</span>         <span class="ansigreen">return</span> list<span class="ansiyellow">(</span>_load_from_socket<span class="ansiyellow">(</span>port<span class="ansiyellow">,</span> self<span class="ansiyellow">.</span>_jrdd_deserializer<span class="ansiyellow">)</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
-<span class="ansigreen">    775</span> <span class="ansiyellow"></span>
+<div class="output_wrapper">
+<div class="output">
 
-<span class="ansigreen">/opt/spark/python/lib/py4j-0.8.2.1-src.zip/py4j/java_gateway.py</span> in <span class="ansicyan">__call__</span><span class="ansiblue">(self, *args)</span>
-<span class="ansigreen">    536</span>         answer <span class="ansiyellow">=</span> self<span class="ansiyellow">.</span>gateway_client<span class="ansiyellow">.</span>send_command<span class="ansiyellow">(</span>command<span class="ansiyellow">)</span><span class="ansiyellow"></span>
-<span class="ansigreen">    537</span>         return_value = get_return_value(answer, self.gateway_client,
-<span class="ansigreen">--&gt; 538</span><span class="ansiyellow">                 self.target_id, self.name)
-</span><span class="ansigreen">    539</span> <span class="ansiyellow"></span>
-<span class="ansigreen">    540</span>         <span class="ansigreen">for</span> temp_arg <span class="ansigreen">in</span> temp_args<span class="ansiyellow">:</span><span class="ansiyellow"></span>
 
-<span class="ansigreen">/opt/spark/python/pyspark/sql/utils.py</span> in <span class="ansicyan">deco</span><span class="ansiblue">(*a, **kw)</span>
-<span class="ansigreen">     34</span>     <span class="ansigreen">def</span> deco<span class="ansiyellow">(</span><span class="ansiyellow">*</span>a<span class="ansiyellow">,</span> <span class="ansiyellow">**</span>kw<span class="ansiyellow">)</span><span class="ansiyellow">:</span><span class="ansiyellow"></span>
-<span class="ansigreen">     35</span>         <span class="ansigreen">try</span><span class="ansiyellow">:</span><span class="ansiyellow"></span>
-<span class="ansigreen">---&gt; 36</span><span class="ansiyellow">             </span><span class="ansigreen">return</span> f<span class="ansiyellow">(</span><span class="ansiyellow">*</span>a<span class="ansiyellow">,</span> <span class="ansiyellow">**</span>kw<span class="ansiyellow">)</span><span class="ansiyellow"></span>
-<span class="ansigreen">     37</span>         <span class="ansigreen">except</span> py4j<span class="ansiyellow">.</span>protocol<span class="ansiyellow">.</span>Py4JJavaError <span class="ansigreen">as</span> e<span class="ansiyellow">:</span><span class="ansiyellow"></span>
-<span class="ansigreen">     38</span>             s <span class="ansiyellow">=</span> e<span class="ansiyellow">.</span>java_exception<span class="ansiyellow">.</span>toString<span class="ansiyellow">(</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
-
-<span class="ansigreen">/opt/spark/python/lib/py4j-0.8.2.1-src.zip/py4j/protocol.py</span> in <span class="ansicyan">get_return_value</span><span class="ansiblue">(answer, gateway_client, target_id, name)</span>
-<span class="ansigreen">    298</span>                 raise Py4JJavaError(
-<span class="ansigreen">    299</span>                     <span class="ansiblue">&apos;An error occurred while calling {0}{1}{2}.\n&apos;</span><span class="ansiyellow">.</span><span class="ansiyellow"></span>
-<span class="ansigreen">--&gt; 300</span><span class="ansiyellow">                     format(target_id, &apos;.&apos;, name), value)
-</span><span class="ansigreen">    301</span>             <span class="ansigreen">else</span><span class="ansiyellow">:</span><span class="ansiyellow"></span>
-<span class="ansigreen">    302</span>                 raise Py4JError(
-
-<span class="ansired">Py4JJavaError</span>: An error occurred while calling z:org.apache.spark.api.python.PythonRDD.collectAndServe.
-: org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 2386.0 failed 4 times, most recent failure: Lost task 0.3 in stage 2386.0 (TID 8233, prod-spark-worker-0-687.prod-usernet-7): java.lang.ArrayIndexOutOfBoundsException
-
-Driver stacktrace:
-	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1283)
-	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1271)
-	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1270)
-	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
-	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:47)
-	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1270)
-	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:697)
-	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:697)
-	at scala.Option.foreach(Option.scala:236)
-	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:697)
-	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:1496)
-	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1458)
-	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1447)
-	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)
-	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:567)
-	at org.apache.spark.SparkContext.runJob(SparkContext.scala:1824)
-	at org.apache.spark.SparkContext.runJob(SparkContext.scala:1837)
-	at org.apache.spark.SparkContext.runJob(SparkContext.scala:1850)
-	at org.apache.spark.SparkContext.runJob(SparkContext.scala:1921)
-	at org.apache.spark.rdd.RDD$$anonfun$collect$1.apply(RDD.scala:909)
-	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:147)
-	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:108)
-	at org.apache.spark.rdd.RDD.withScope(RDD.scala:310)
-	at org.apache.spark.rdd.RDD.collect(RDD.scala:908)
-	at org.apache.spark.api.python.PythonRDD$.collectAndServe(PythonRDD.scala:405)
-	at org.apache.spark.api.python.PythonRDD.collectAndServe(PythonRDD.scala)
-	at sun.reflect.GeneratedMethodAccessor68.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:231)
-	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:379)
-	at py4j.Gateway.invoke(Gateway.java:259)
-	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:133)
-	at py4j.commands.CallCommand.execute(CallCommand.java:79)
-	at py4j.GatewayConnection.run(GatewayConnection.java:207)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: java.lang.ArrayIndexOutOfBoundsException
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Train model with rank=50 lambda_=0.000100 alpha=40.000000
 </pre>
 </div>
 </div>
@@ -6736,7 +6687,43 @@ Caused by: java.lang.ArrayIndexOutOfBoundsException
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">evaluations</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[16]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[((10, 1.0, 1.0), 0.9705712718823059),
+ ((10, 1.0, 40.0), 0.9764229895958471),
+ ((10, 0.0001, 1.0), 0.9635840370817447),
+ ((10, 0.0001, 40.0), 0.9759647705484272),
+ ((50, 1.0, 1.0), 0.9665467972693644),
+ ((50, 1.0, 40.0), 0.9762816946623598),
+ ((50, 0.0001, 1.0), 0.9539040905823785),
+ ((50, 0.0001, 40.0), 0.9749233258563186)]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">evaluations</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">r</span><span class="p">:</span><span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
@@ -6752,32 +6739,30 @@ Caused by: java.lang.ArrayIndexOutOfBoundsException
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">evaluations</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
 <div class="output_wrapper">
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[21]:</div>
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>                    0         1
+0     (10, 1.0, 40.0)  0.976423
+1     (50, 1.0, 40.0)  0.976282
+2  (10, 0.0001, 40.0)  0.975965
+3  (50, 0.0001, 40.0)  0.974923
+4      (10, 1.0, 1.0)  0.970571
+5      (50, 1.0, 1.0)  0.966547
+6   (10, 0.0001, 1.0)  0.963584
+7   (50, 0.0001, 1.0)  0.953904
+</pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">Out[17]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[((10, 1.0, 1.0), 0.9705712718823059),
- ((10, 1.0, 40.0), 0.9764229895958471),
- ((10, 0.0001, 1.0), 0.9635840370817447),
- ((10, 0.0001, 40.0), 0.9759647705484272),
- ((50, 1.0, 1.0), 0.9665467972693644)]</pre>
+<pre>PythonRDD[12] at RDD at PythonRDD.scala:43</pre>
 </div>
 
 </div>
@@ -6821,7 +6806,7 @@ Caused by: java.lang.ArrayIndexOutOfBoundsException
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">model</span> <span class="o">=</span> <span class="n">ALS</span><span class="o">.</span><span class="n">trainImplicit</span><span class="p">(</span><span class="n">trainData</span><span class="p">,</span> <span class="n">evaluations</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="p">,</span> <span class="mi">5</span> <span class="p">,</span> <span class="n">evaluations</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">alpha</span> <span class="o">=</span> <span class="n">evaluations</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">])</span>
@@ -6842,6 +6827,30 @@ Caused by: java.lang.ArrayIndexOutOfBoundsException
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&apos;[unknown]&apos;, &apos;The Killers&apos;, &apos;Coldplay&apos;, &apos;U2&apos;, &apos;Weezer&apos;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Answer-:">Answer :<a class="anchor-link" href="#Answer-:">&#182;</a></h3><p>Here we tried only a few combination of parameters by lack of time. If this application had a real commercial purpose, we would have used an algorithm like gradient descent on a function like accuracy = f(rank, lambda, alpha). Because it could have taken a lot of time to find the optimal parameters, but we wouldn't have needed to do the gradient descent again for each training. Furthermore, we could change the iteration parameter but it would impact the training performance. Again it depends on the use of our recommendation algorithm. If we consider that a single model could get meaningful recommendations for several weeks, we could allow ourselves to increase the number of iterations (therefore increasing the creation time of the model).</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
