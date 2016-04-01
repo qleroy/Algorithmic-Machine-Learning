@@ -202,10 +202,10 @@ div#notebook {
 
 
 
-<div id="f21f8a82-a4bb-49f5-8064-967884218999"></div>
+<div id="67350b75-57d7-439f-be91-4d106f66bf1d"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#f21f8a82-a4bb-49f5-8064-967884218999');
+var element = $('#67350b75-57d7-439f-be91-4d106f66bf1d');
 var kernel = IPython.notebook.kernel;var thename = window.document.getElementById("notebook_name").innerHTML;var command = "THE_NOTEBOOK = " + "'"+thename+"'";kernel.execute(command);command="os.environ['THE_NOTEBOOK'] = THE_NOTEBOOK";kernel.execute(command);var cell = IPython.notebook.get_cell(2);cell.execute();IPython.notebook.get_cell(3).focus_cell();var x = $('.code_cell');$(x[1]).children('.input').hide();
 </script>
 </div>
@@ -7983,7 +7983,7 @@ After some tweaks and tests on the features, the precision wasn't still very sat
     b) Trying features combinaisons to predict the air delay
     c) Predict the arrival delay
 </code></pre>
-<h4 id="5)-Looking-into-the-influence-of-the-corner-cases">5) Looking into the influence of the corner cases<a class="anchor-link" href="#5)-Looking-into-the-influence-of-the-corner-cases">&#182;</a></h4><h4 id="6)-Adding-extreme-weather-data">6) Adding extreme weather data<a class="anchor-link" href="#6)-Adding-extreme-weather-data">&#182;</a></h4><p><br>
+<h4 id="5)-Looking-into-the-influence-of-the-corner-cases">5) Looking into the influence of the corner cases<a class="anchor-link" href="#5)-Looking-into-the-influence-of-the-corner-cases">&#182;</a></h4><p><br>
 <br></p>
 
 </div>
@@ -7995,17 +7995,6 @@ After some tweaks and tests on the features, the precision wasn't still very sat
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="1)-Loading,-calculating-new-and-potentially-interesting-features">1) Loading, calculating new and potentially interesting features<a class="anchor-link" href="#1)-Loading,-calculating-new-and-potentially-interesting-features">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div class="note">
-The csv file was retrieved from here http://www1.ncdc.noaa.gov/pub/data/swdi/stormevents/csvfiles/, one file per year, we only downloaded for year 1994, in these files we can find data about severe weather events that occured in the USA, the file was quite big so we had to choose some columns before uploading it to hdfs (we have chosen `
-</div>
 </div>
 </div>
 </div>
@@ -8053,7 +8042,6 @@ The csv file was retrieved from here http://www1.ncdc.noaa.gov/pub/data/swdi/sto
 
 <span class="n">base_storm_events</span> <span class="o">=</span> <span class="s2">&quot;/user/group07/storm_events_&quot;</span>
 
-<span class="c1"># base = &quot;/Users/quentinleroy/Documents/Eurecom/AML/Lab5+6/air_delays/&quot;</span>
 
 <span class="n">sqlContext</span> <span class="o">=</span> <span class="n">SQLContext</span><span class="p">(</span><span class="n">sc</span><span class="p">)</span>
 
@@ -8317,6 +8305,7 @@ We want to add a level of abstraction, so that we can easily load one (or severa
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class="note">
+The **airports** data aws retrieved from http://stat-computing.org/dataexpo/2009/supplemental-data.html. It is mainly useful to capture geographical information about the airports. We have the state code in this file so it will be easy to join with our main dataframe. <br>
 Here is the function to load airport data. There are a lot of fields here. But the ones we kept are only the airport code, the state, and it's coordinates.
 </div>
 </div>
@@ -24957,7 +24946,7 @@ Unfortunately we have experienced a last minute problem with joining with the we
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Dealing-with-the-outliers-(arrival_delay&gt;=60)">Dealing with the outliers (arrival_delay&gt;=60)<a class="anchor-link" href="#Dealing-with-the-outliers-(arrival_delay&gt;=60)">&#182;</a></h1>
+<h1 id="Looking-into-the-influence-of-the-corner-cases">Looking into the influence of the corner cases<a class="anchor-link" href="#Looking-into-the-influence-of-the-corner-cases">&#182;</a></h1><h3 id="Dealing-with-the-outliers-(arrival_delay&gt;=threshold)">Dealing with the outliers (arrival_delay&gt;=threshold)<a class="anchor-link" href="#Dealing-with-the-outliers-(arrival_delay&gt;=threshold)">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -26333,7 +26322,7 @@ JyESAAAAAJ3+P4s/QfysfUCzAAAAAElFTkSuQmCC
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class="note">
-Unfortunately this attemps has failed. Still we believe that we would have noticed a correlation between where the very very late flights came from and where the extreme weather occured.
+Unfortunately this attemps has **failed**. Still we believe that we would have noticed a correlation between where the very very late flights came from and where the extreme weather occured.
 </div>
 </div>
 </div>
@@ -26620,19 +26609,6 @@ finish in 175.607219 seconds
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre> 
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -26826,7 +26802,7 @@ mean arrival delay: 4.846526353167841
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;scheduled_arrival_minutes&quot;</span><span class="p">,</span> <span class="s2">&quot;scheduled_departure_minutes&quot;</span><span class="p">,</span> <span class="s2">&quot;scr_airport&quot;</span><span class="p">,</span> <span class="s2">&quot;dest_airport&quot;</span><span class="p">,</span>\
@@ -26840,45 +26816,36 @@ mean arrival delay: 4.846526353167841
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Prediction for arrival_delay with as parameters:
+[&apos;scheduled_arrival_minutes&apos;, &apos;scheduled_departure_minutes&apos;, &apos;scr_airport&apos;, &apos;dest_airport&apos;, &apos;is_WedThuFri&apos;, &apos;distance&apos;, &apos;carrier&apos;, &apos;month&apos;, &apos;day_of_week&apos;]
+numTrees:  5 maxDepth:  16
+Test Mean Squared Error = 343.5039475130257
+finish in 1368.658518 seconds
+</pre>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre> 
-</pre></div>
-
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="comment">
+This huge test is actually worse than the one with a smaller set of selected features. We have shown before than the geographical features (`src_airport_lat`, `src_airport_long`, `dest_airport_lat` and `dest_airport_long`) and the planes features were informative. The problem here is that we maybe have too many features compared to the maxDepth of our model, even if we have increased it to 16.<br>
+Unfortunately we lack of time to do further exploration of the new features we have imported, and we are maybe still missing important features such `year_mfr` for the planes data  (year of manufacture). Besides the planes data were quite uncomplete because they only provide information about recent planes and our flights data is about year 1994. A lot of flights were not provided plane features. Lastly we did not manage to properly join weather data, we guess that we have a problem with joining on mulitple columns (`state`, `month`, `day_of_month`, `day_of_week`. Deeper work is still required.
 </div>
 </div>
 </div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre> 
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre> 
-</pre></div>
-
-</div>
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
