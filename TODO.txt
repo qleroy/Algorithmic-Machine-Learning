@@ -1,0 +1,18 @@
+- There are two stocks with A LOT of missing values (see the part "dealing with missing values"). We should plot them(x=time, y = value)
+- At "Step 2: Defining the distributions for the market conditions". There are plots of the factors returns. (first four ones). 
+It should be cool to have the factorsReturns and the normal distribution model associated on the same chart.
+- Training and testing on the same data is not a good idea. we could do cross validatation and see the results.
+- Since the last question ask us to try different probabilty distributions. I suggest trying with those distributions:
+https://en.wikipedia.org/wiki/Cauchy_distribution
+https://en.wikipedia.org/wiki/F-distribution
+https://en.wikipedia.org/wiki/Student%27s_t-distribution
+http://www.itl.nist.gov/div898/handbook/eda/section3/eda366g.htm
+- It would be nice to have a measure of how well is a model distribution fitting our factors. I suggest something like integral((factor-model)**2).
+With this, a function could choose which factor should have which model based on this measure (could save us a lot of time)
+- We associate stocks returns to factor with a linear model. for each factor, we associate x: (sqrt(x),x,x**2). 
+we could try something like (sqrt(x),x,x**2,exp(x))
+or (x,x**2) to avoid overfitting.
+Also that and remove the 4th factor (useless) to see if it gets better.
+And use mean square error to check all that.
+- The thing to see if we can break down the problem into 2 smaller problems. model factor distribution and model the link between the factors and the stocks.
+If the measure for both problems is better, we should check if the Kupiec test p-value is higher.
