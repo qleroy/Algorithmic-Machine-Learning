@@ -1,5 +1,5 @@
-- There are two stocks with A LOT of missing values (see the part "dealing with missing values"). We should plot them(x=time, y = value)
-- At "Step 2: Defining the distributions for the market conditions". There are plots of the factors returns. (first four ones). 
+DONE - There are two stocks with A LOT of missing values (see the part "dealing with missing values"). We should plot them(x=time, y = value)
+DONE - At "Step 2: Defining the distributions for the market conditions". There are plots of the factors returns. (first four ones). 
 It should be cool to have the factorsReturns and the normal distribution model associated on the same chart.
 - Training and testing on the same data is not a good idea. we could do cross validatation and see the results.
 - Since the last question ask us to try different probabilty distributions. I suggest trying with those distributions:
