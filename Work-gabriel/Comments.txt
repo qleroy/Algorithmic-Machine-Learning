@@ -1,0 +1,3 @@
+2.1.b.1) We see here that a lot of voxels(the black ones) correspond to something that is not the brain of this fish. It would be wise to remove them to obtain more accurate results and cut some computation time.
+2.1.b.2) Here the image seems quite symetric, even if the upper side seems to have more variations than the lower side. It means that the parts of the brain that are active are symetric, but it seems that the action that the fish was doing required more activity from a side of the brain. (symetric neurons don't necessarely have a symetric activity)
+3) Now the images of layers only have a resolution of 16 by 16 pixels, instead of 76 by 87. But the number of layers stays the same.
